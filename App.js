@@ -1,12 +1,19 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar } from "expo-status-bar";
+import React from "react";
+import { StyleSheet, Text, View, ImageView } from "react-native";
+
+import Color from './constant/Color';
+
+import BottomBar from "./components/BottomBar";
+import PlayArea from "./components/PlayArea";
+import Information from "./components/Information";
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <Information/>
+      <PlayArea />
+      <BottomBar />
     </View>
   );
 }
@@ -14,8 +21,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: Color.primary,
+    justifyContent: "space-between",
   },
 });
